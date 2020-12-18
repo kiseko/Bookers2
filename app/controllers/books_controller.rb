@@ -1,8 +1,8 @@
 class BooksController < ApplicationController
-  
+
   def create
   end
-  
+
   def index
   end
 
@@ -11,17 +11,17 @@ class BooksController < ApplicationController
 
   def edit
   end
-  
+
   def update
   end
-  
+
   def destroy
   end
-  
+
   private
-  
+
   def book_params
     params.require(:book).permit(:title, :body)
-    e
-  
+  end
+
 end
