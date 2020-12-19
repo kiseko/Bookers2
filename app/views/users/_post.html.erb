@@ -1,0 +1,7 @@
+<h2>User info</h2>
+<%= attachment_image_tag user, :profile_image %>
+<%= user.name %>
+<%= user.introduction %>
+<% if user.id == current_user.id %>
+<%= link_to "edit", edit_user_path(user) %>
+<% end %>

@@ -1,1 +1,10 @@
+<%= render "users/post", user: @user %>
+
 <h1>users</h1>
+<% @users.each do |user| %>
+<div>
+<%= attachment_image_tag user, :profile_image %>
+<%= user.name %>
+<%= link_to "show", user_path(user.id) %>
+</div>
+<% end %>
