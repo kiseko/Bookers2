@@ -1,2 +1,18 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<% if @book.errors.any? %>
+  <P><%= @book.errors.count %>errors prohibited this obj from being saved:</p>
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h1>Editing Books</h1>
+<%= form_with model: @book, local:true do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<%= f.label :option %>
+<%= f.text_area :body %>
+<%= f.submit "Update Book" %>
+<% end %>
+
