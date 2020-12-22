@@ -1,5 +1,11 @@
-<%= render "layouts/flash" %>
+<div class="container px-5 px-sm-0">
+  <div class="row">
 
-<%= render "users/post", user: @user, book: @book %>
+    <%= render "layouts/flash" %>
 
-<%= render "books/list", books: @books %>
+    <%= render "users/post", user: @user, book: @book %>
+
+    <%= render "books/list", books: @books %>
+
+  </div>
+</div>
